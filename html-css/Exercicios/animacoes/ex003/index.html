@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito deslizante</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-img {
+            width: 700px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .antes, .depois {
+            width: 100%;
+            height: 100%;
+            background-size: cover; 
+            position: absolute;
+        }
+        
+        span {
+            padding: 15px;
+            background-color: lightcoral;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: inline-block;
+            border-bottom-right-radius: 20px;
+        }
+
+        .depois {
+            left: 100%;
+            transition: left .5s;
+        }
+
+        .box-img:hover .depois {
+            left: 85%;
+        }
+
+        .box-img:active .depois {
+            left: 0%;
+        }
+        #img1 {
+            background: url(pexels-alex-blokstra-1327373.jpg);
+        }
+        #img2 {
+            background: url(pexels-nextvoyage-1476880.jpg);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box-img">
+        <div class="antes" id="img1"><span>Antes</span></div>
+        <div class="depois" id="img2"><span>Depois</span></div>
+    </div>
+</body>
+</html>

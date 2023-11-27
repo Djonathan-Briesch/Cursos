@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adivinhar Palavra</title>
+  <script>
+    function adivinharPalavra() {
+      let palavraCorreta = document.getElementById("palavraCorreta").value;
+      let tentativas = 0;
+      let acertou = false;
+      let caracteres = "abcdefghijklmnopqrstuvwxyz";
+
+      while (!acertou) {
+        let palavraTeste = "";
+        tentativas++;
+
+        for (let i = 0; i < palavraCorreta.length; i++) {
+          let caractereAleatorio = caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+          palavraTeste += caractereAleatorio;
+        }
+
+        if (palavraTeste === palavraCorreta) {
+          acertou = true;
+          document.getElementById("resultado").textContent = "O código adivinhou a palavra correta em " + tentativas + " tentativas.";
+        } else {
+          document.getElementById("resultado").textContent = "Tentativa " + tentativas + ": Palavra testada: " + palavraTeste;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Adivinhar Palavra</h1>
+  <label for="palavraCorreta">Digite a palavra:</label>
+  <input type="text" id="palavraCorreta">
+  <button onclick="adivinharPalavra()">Adivinhar</button>
+  <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+div#button{
+    flex-direction: row;
+}
+
+button {
+    height: 40px;
+    width: 50px;
+    background-color: aliceblue;
+    font-weight: bolder;
+    color: black;
+    font-size: large;
+}
+
+input {
+    
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 300px;
+}
+
+p#res{
+    background-color: lightgray;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid black;
+}

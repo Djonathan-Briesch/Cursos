@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica classes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box1 box">
+            <div class="box-numeros-objs box-elementos">
+                <label for="nObjs">Número de objetos</label>
+                <input data-input-n-objs type="number" name="nObjs" id="nObjs" value="0" disabled>
+            </div>
+            <div class="box-quantidade-objs box-elementos">
+                <label for="qObjs">Quantidade de Objetos</label>
+                <input data-input-q-objs type="number" name="qObjs" id="qObjs" value="0" min="0">
+                <button data-btn-add class="btn-add">Adicionar</button>
+            </div>
+            <div class="box-btn-remover box-elementos">
+                <button data-btn-remover class="btn-remover">Remover todos</button>
+            </div>
+        </div>
+        <div data-box2 class="box2 box">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

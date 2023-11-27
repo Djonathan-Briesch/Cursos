@@ -1,0 +1,35 @@
+// Operadores e Operações
+
+ Aritimeticos
+
+    + Adição
+    - Subtração
+    * Multiplicação
+    / Divisão
+    % Resto ou Modulo
+
+
+ OPERADORES DE ATRIBUIÇÃO
+
+
+    =   Atribui um valor
+    ==  Igual a
+    === Identico a (2 e "2" são diferentes)
+    !=  Diferente de
+    !== Não é identico
+
+
+ Lógicos
+
+
+    && E    AND
+    || OU   OR
+    !  NÃO  NOT (Negação)
+
+
+ Relacionais
+
+    >   Maior
+    <   Menor
+    >=  Maior ou igual
+    <=  Menor ou igual

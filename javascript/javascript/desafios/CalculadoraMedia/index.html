@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de média</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Calcular Média</h1>
+        <section class="conteudo">
+            <form>
+                <div class="notas">
+                    <label for="nota1">Nota 1</label>
+                    <input type="number" name="nota1" id="nota1" placeholder="0.0" min="0.0" max="10" step=".1" required onblur="validarNumero(this)">
+                    <br>
+                    <label for="nota2">Nota 2</label>
+                    <input type="number" name="nota2" id="nota2" placeholder="0.0" min="0.0" max="10" step=".1" required onblur="validarNumero(this)">
+                </div>
+                <div class="botoes">
+                    <button id="btnEnviar" type="submit">Calcular</button>
+                    <button id="btnLimpar" type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+        <section class="resultado">
+            <label for="media">Média</label>
+            <input type="number" name="media" id="media" value="0.0" disabled>      
+        </section>
+        <div class="situacao">Situação atual</div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+div.cursos {
+    border-radius: 10px;
+    border: 3px solid black;
+    text-align: center;
+    height: 20px;
+    width: 200px;
+    padding: 6px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div.c1 {
+    background-color: lightgray;
+}
+
+div.c2 {
+    color: white;
+    background-color: gray;
+}
+
+.destaque {
+    border: 3px solid rgb(0, 38, 255) !important;
+    background-color: red !important;
+}

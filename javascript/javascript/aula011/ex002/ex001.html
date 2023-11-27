@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO - Herança</title>
+    <script>
+        class Carro{
+            constructor(tpCarro, tpCombustivel){
+                this.tipoCarro = tpCarro;
+                this.quantidadeDeCombustivel = 100;
+                this.ligado = false;
+                this.tipoDeCombustivel = tpCombustivel;
+            }
+
+            info() {
+                console.log("Tipo de Carro............: " + this.tipoCarro);
+                console.log("Quantidade de combustivel: " + this.quantidadeDeCombustivel);
+                console.log("Ligado...................: " + this.ligado);
+                console.log("Tipo de Combustivel......: " + this.tipoDeCombustivel);
+                
+            }
+
+            set Setligar(t){
+                this.ligado = t;
+            }
+
+            get Getligar(){
+                return this.ligado;
+            }
+
+            set setCombustivel(v){
+                this.quantidadeDeCombustivel = v;
+            }
+
+            get getCombustivel(){
+                return this.quantidadeDeCombustivel;
+            }
+        }
+
+        class CarroCombate extends Carro{ // CarroCombate herdou Carro
+            constructor(pttiro){
+                super(1,2); // acessando o construtor da classe pai
+                this.municao = 1000;
+                this.potenciaTIro = pttiro;
+                this.blindagem = 100;
+            }
+            info(){
+                super.info();
+                console.log("Municao.........: " + this.municao);
+                console.log("Potencia do tiro: " + this.potenciaTIro);
+                console.log("Blindagem.......: " + this.blindagem);
+            }
+        }
+
+        class CarroTransporte extends Carro {
+            constructor(){
+                super(2,2)
+            }
+        }
+
+        let carroTransporte1 = new CarroTransporte();
+
+        carroTransporte1.info();
+        /* let carro1 = new Carro(1,3);
+        let carroCombate = new CarroCombate();
+        let carroCombate2 = new CarroCombate(50);
+        carro1.info();
+        console.log("----------------------------------------------------------");
+        carroCombate.info();
+        console.log("----------------------------------------------------------");
+        carroCombate2.info();
+        */ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

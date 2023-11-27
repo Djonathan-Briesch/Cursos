@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+
+    :root {
+        --cor1: #46D1EA;
+        --cor2: #00C3E6;
+        --cor3: #0097B2;
+        --cor4: #005766;
+        --cor5: #00404b;
+    
+    }
+
+    i#list-icon {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+    
+    menu > ul > li {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    
+    menu > ul > li > a {
+        border-radius: 10px;
+    }
+
+    menu > ul > li > a:hover {
+        padding: 15px;
+        border: 1px solid var(--cor3);
+        transition: 0.4s;
+    }
+
+    main {
+        width: 700px;
+        font-size: 1.1em;
+    }
+    
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO - JS</title>
+    <script>
+
+        class Carro {
+            
+            static alerta = true; // É apontada para todos os objetos (é a mesma variavel para todos)
+
+            constructor(marca, modelo, cor){
+                this.marca  = marca;
+                this.modelo = modelo;
+                this.cor    = cor;
+                this.ligado = false;
+                this.km     = 0;
+                this.comb   = 10;
+                
+            }
+            info(){
+                console.log("Marca......: "       + this.marca);
+                console.log("Modelo.....: "      + this.modelo);
+                console.log("Cor........: "         + this.cor);
+                console.log("Ligado.....: "      + (this.ligado ? "Sim" : "Não"));
+                console.log("KM.........: "          + this.km);
+                console.log("Combustível: " + this.comb);
+                console.log("Aletra.....: " + (Carro.alerta? "Sim": "Não"));
+                console.log("-------------------------------------------------------");
+                
+            }
+
+            ligar(){
+                this.ligado = true;
+            }
+            desligar(){
+                this.ligado = false;
+            }
+
+            set setComb(v){ // Metodo Setter (Definir o valor no objeto)
+                this.comb = v; // Usar sempre para alterar o valor e um atributo.
+            }
+
+            get getComb(){ // Metodo Getter (Obter o valor de um atributo do objeto )
+                return this.comb;
+            }
+
+            definirAlerta(t){
+                Carro.alerta = t;
+            }
+        }
+
+        let carro1 = new Carro("Honda", "HRV", "Azul");
+        let carro2 = new Carro("VW", "Golf", "Vermelho");
+        let carro3 = new Carro("GM", "Camaro", "Amarelo");
+        let carro4 = new Carro("Ford", "Mustang", "Verde");
+
+        carro1.cor = "Preto";
+
+        carro1.setComb=100;
+        console.log(carro1.getComb); 
+
+        //carro1.definirAlerta(false);
+        Carro.alerta = false;
+
+
+        carro1.ligar();
+        carro4.ligar();
+
+        carro1.info();
+        carro2.info();
+        carro3.info();
+        carro4.info();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

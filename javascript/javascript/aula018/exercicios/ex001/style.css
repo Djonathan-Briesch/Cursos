@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.257);
+}
+
+.container{
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid black;
+    
+}
+
+.boxInputs{
+    margin: 8px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    cursor: pointer;
+}
+
+.inputsBox{
+    height: 25px;
+    width: 300px;
+    margin: 5px 0px;
+    padding-left: 5px;
+    border: 1px solid balck;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
+}
+
+.boxRadio{
+    margin: 5px 0px;
+}
+
+.boxInputRadio{
+    margin: 5px 0px;
+}
+
+
+.boxBtn {
+    margin: 5px 0px;
+}
+
+.btn {
+    height: 30px;
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+/*-------------------------*/
+.resultado{
+    margin: 10px;
+    padding: 8px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pResultado{
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px dashed black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxDelete {
+    cursor: pointer;
+}

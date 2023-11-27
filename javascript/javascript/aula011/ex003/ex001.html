@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO - Prototype</title>
+    <script>
+        Object.prototype
+        class Carro{
+            constructor(tpCarro, tpCombustivel){
+                this.tipoCarro = tpCarro;
+                this.quantidadeDeCombustivel = 100;
+                this.ligado = false;
+                this.tipoDeCombustivel = tpCombustivel;
+            }
+
+            info() {
+                console.log("Tipo de Carro............: " + this.tipoCarro);
+                console.log("Quantidade de combustivel: " + this.quantidadeDeCombustivel);
+                console.log("Ligado...................: " + this.ligado);
+                console.log("Tipo de Combustivel......: " + this.tipoDeCombustivel);
+                
+            }
+
+            set Setligar(t){
+                this.ligado = t;
+            }
+
+            get Getligar(){
+                return this.ligado;
+            }
+
+            set setCombustivel(v){
+                this.quantidadeDeCombustivel = v;
+            }
+
+            get getCombustivel(){
+                return this.quantidadeDeCombustivel;
+            }
+        }
+
+
+        Carro.prototype.potecia = 0;
+        Carro.prototype.velocidade = 0;
+        Carro.prototype.velicidadeMax = 0;
+
+        Carro.prototype.info2 = function () { // pode sobresescrever
+            this.info();
+            console.log("Potencia.........: " + this.potecia);
+            console.log("Velocidade.......: " + this.velocidade);
+            console.log("Velocidade maxima: " + this.velicidadeMax);
+            
+        }
+
+        let carro1 = new Carro(1,3);
+        
+        
+        carro1.info2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

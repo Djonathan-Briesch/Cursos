@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular CSS com DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            background: lightblue;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        main > h1 {
+            margin: 15px 0px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button#btlight {
+            background: white;
+        }
+
+        button#btlight:hover {
+            background: rgb(235, 235, 235);
+        }
+
+        button#btdark {
+            background: black;
+            color: white;
+        }
+
+        button#btdark:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        section, article {
+            margin-bottom: 1em;
+        }
+
+        section {
+            margin: 30px 10px;
+        }
+
+        article {
+            margin: 30px 0px;
+        }
+
+        .dark {
+            background-color: black;
+        }
+
+        .light {
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <main >
+        <h1>Aula 6 - CSS com DOM</h1>
+        <div>
+            <button id="btlight" class="modos">Light</button>
+            <button id="btdark" class="modos">Dark</button>
+        </div>
+        <section id="conteudos">
+            <article class="box">
+                <h2>Imagem</h2>
+                <figure>
+                    <img id="foto" src="" alt="foto">
+                    <p>Texto de texte 1 em parágrafo</p>
+                </figure>
+            </article>
+            <article class="box">
+                <h2>Título</h2>
+                <p>Texto de texte 2 em parágrafo</p>
+            </article>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

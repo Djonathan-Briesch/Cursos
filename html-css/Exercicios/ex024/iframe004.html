@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança de iframes</title>
+    <style>
+        iframe{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero molestiae animi qui aperiam cum veritatis vitae itaque, repudiandae dicta sed vero laudantium error aliquam in dolores quas provident fugit.
+
+    </p>
+    <!-- 
+        Sandbox="sandbox" = Configuarações de segurança no maximo
+        
+        allow-same-origin   = mesma origem 
+        allow-forms         = formularios
+        allow-scripts       = scripts
+
+        referrerpolicy="no-referrer" = Sem coleta de dados para algoritimo do google
+    -->
+    <iframe src="paginas-extras/pagina004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        Sem compatibilidade
+    </iframe>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem culpa corrupti facere libero repudiandae ratione. Ipsa minima tempora vero voluptate laudantium, sint illo neque dolor veniam alias, dignissimos doloribus earum!
+    </p>
+</body>
+</html>

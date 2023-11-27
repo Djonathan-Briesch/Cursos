@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conteiner {
+            background-color: rgb(255, 185, 158);
+            border: 5px solid black;
+            height: 900px;
+
+            display: flex;
+
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .itens {
+    
+            height: 150px;
+            background-color: blue;
+            border: 1px solid black;
+            color: white;
+
+            /*
+                flex-basis: 300px;
+                flex-grow: 1;
+                flex-shrink: 1;
+            */
+            
+            flex: 1 1 300px;
+        }
+
+        /* #item-1 {
+            flex-grow: 2;
+        }
+
+        #item-2, #item-3 {
+            flex-grow: 1;
+        }
+
+        #item-2 {
+            flex-basis: 500px;
+        } */
+        #item-3 {
+            flex-shrink: 2;
+        }
+
+        #item-1 {
+            order: 2;
+        }
+        #item-2 {
+            order: 3;
+            align-self: flex-start;
+        }
+        #item-3 {
+            order: 1;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div id="item-1" class="itens">1</div>
+        <div id="item-2" class="itens">2</div>
+        <div id="item-3" class="itens">3</div>
+    </div>
+</body>
+</html>
